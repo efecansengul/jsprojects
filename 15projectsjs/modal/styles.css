@@ -1,0 +1,91 @@
+:root {
+  --background: url("./public/backgroundImage.jpg") no-repeat 50% 50%;
+  --font-size: 32px;
+  --font-family: Arial, Helvetica, sans-serif;
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--background);
+}
+.modal {
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 30%;
+  align-items: center;
+  margin: 50% auto;
+  justify-content: center;
+  gap: 25%;
+  border-radius: 8px;
+}
+.modal > h1 {
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+}
+.modal > button {
+  font-family: var(--font-family);
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  letter-spacing: 4px;
+  background-color: rgb(86, 148, 156);
+}
+button:hover {
+  animation: scale 1s ease-out;
+}
+@keyframes scale {
+  25% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.open {
+  background-color: whitesmoke;
+  width: 40%;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size);
+  position: relative;
+  border-radius: 10px;
+  z-index: 1001;
+}
+.fas.fa-times {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  transition: transform 0.3s ease-in;
+}
+.fas.fa-times:hover {
+  transform: scale(1.2) rotate(15deg);
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+}
+.hidden {
+  display: none;
+}

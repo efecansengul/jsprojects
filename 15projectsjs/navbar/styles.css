@@ -1,0 +1,65 @@
+:root {
+  --font-size: 24px;
+}
+* {
+  margin: 0;
+}
+.header {
+  background-color: aquamarine;
+  margin: 0 auto;
+}
+ul {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--font-size);
+  list-style: none;
+  padding: 0 50px;
+  height: 72px;
+}
+.pages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.fas.fa-bars {
+  display: none;
+  transition: transform 0.3s ease;
+}
+
+/* 800px'den küçük ekranlarda görünür yap */
+@media (max-width: 800px) {
+  .fas.fa-bars {
+    display: block;
+  }
+  .pages {
+    display: none;
+  }
+  .social {
+    display: none;
+  }
+}
+.appear {
+  display: none;
+  background-color: antiquewhite;
+  font-size: var(--font-size);
+}
+.appear > li {
+  list-style: none;
+  padding: 1rem;
+}
+.appear.block {
+  display: block;
+}

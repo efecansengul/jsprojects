@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+}
+.section {
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  width: 60%;
+  min-height: 50vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 2px 2px 2px 2px rgb(129, 129, 129);
+  border-radius: 2px;
+}
+.form {
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+.form h3 {
+  font-size: 2em;
+  flex: 1;
+  margin-bottom: 1rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  letter-spacing: 0.4em;
+  margin: 0 auto;
+}
+.form p {
+  margin-bottom: 1vh;
+}
+.form div {
+  display: flex;
+
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  padding: 1rem;
+}
+.form input {
+  flex: 1;
+  max-width: 70%;
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  letter-spacing: 1.1px;
+  background-color: aliceblue;
+}
+.form button {
+  width: 20%;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  background-color: rgb(48, 120, 183);
+  letter-spacing: 1.1px;
+  cursor: pointer;
+}
+.taken {
+  display: flex;
+  flex-direction: column;
+  max-height: 30vh;
+  overflow-y: auto; /* Scroll bar */
+  min-height: 100%;
+  padding: 1rem;
+  width: 100%;
+}
+.taken li {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  height: 4vh;
+  width: 100%;
+  justify-content: space-between;
+  padding: 1em;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  letter-spacing: 1.1px;
+  font-size: 18px;
+  font-weight: 500;
+}
+i {
+  cursor: pointer;
+  padding: 6px;
+}
+.appear {
+  opacity: 0;
+}
+.add {
+  color: green;
+  opacity: 1;
+}
+.remove {
+  color: red;
+  opacity: 1;
+}
+.removeall {
+  position: absolute;
+  bottom: 20px;
+  background-color: red;
+  padding: 8px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}

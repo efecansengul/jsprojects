@@ -1,0 +1,205 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  height: 72px;
+
+  justify-content: space-evenly;
+  background-color: aliceblue;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  width: 30%;
+  justify-content: space-evenly;
+  max-width: 400px;
+  height: 72px;
+  padding: 0 100px;
+  text-decoration: none;
+}
+
+.links > a {
+  text-decoration: none;
+  padding: 8px;
+  outline: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: black;
+}
+
+a:active {
+  color: black;
+}
+
+/* Hamburger menü simgesi ve mobil stil */
+.navbar .icon {
+  display: none; /* Hamburger simgesi varsayılan olarak gizli */
+}
+.home {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 72px);
+  padding: 72px;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 1200px; /* Daha büyük ekranlarda sınır */
+}
+.home > h1 {
+  color: whitesmoke;
+  font-size: 44px;
+  letter-spacing: 1.1px;
+}
+.home > p {
+  color: whitesmoke;
+  font-size: 18px;
+}
+.home > a {
+  border: 1px solid white;
+  padding: 8px;
+  text-decoration: none;
+  color: whitesmoke;
+  border-radius: 4px;
+  background-color: black;
+}
+
+.overlay {
+  position: absolute;
+  background-image: url("./public/boliviainteligente-GHBF_3cO8rA-unsplash.jpg");
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center; /* Görüntüyü merkeze hizalar */
+  background-repeat: no-repeat; /* Görüntünün tekrar etmesini engeller */
+  z-index: -1; /* Diğer içeriklerin arkasında görünür */
+}
+.about {
+  display: flex;
+
+  flex-direction: column;
+  height: calc(100vh - 72px);
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  padding: 72px;
+}
+.services {
+  display: flex;
+
+  flex-direction: column;
+  height: calc(100vh - 72px);
+  align-items: center;
+  text-align: center;
+  background-color: rgb(121, 62, 126);
+  padding: 72px;
+}
+.tours {
+  display: flex;
+  padding: 72px;
+  flex-direction: column;
+  height: calc(100vh - 72px);
+  align-items: center;
+  text-align: center;
+  background-color: white;
+}
+
+@media (max-width: 950px) {
+  .navbar .links {
+    display: none; /* Menü varsayılan olarak gizli */
+    flex-direction: column; /* Menü öğelerini dikeyde göster */
+    background-color: aliceblue; /* Menü arka plan rengi */
+    width: 100%; /* Menü genişliği tam ekran */
+    position: absolute;
+    top: 72px; /* Menü navbar'ın altında açılacak */
+    left: 0;
+    padding: 10px 0;
+  }
+
+  .navbar .icon {
+    display: block; /* Hamburger menü simgesi görünür */
+    font-size: 30px; /* İkonun boyutunu ayarlayabiliriz */
+    cursor: pointer;
+  }
+  .navbar {
+    justify-content: space-evenly;
+  }
+}
+
+.small-header > a {
+  text-decoration: none;
+  color: black;
+}
+
+.small-header {
+  display: none;
+}
+
+.small-header.active {
+  position: fixed;
+  margin-top: 72px;
+  display: flex;
+  height: 150px;
+  background-color: aliceblue;
+  flex-direction: column;
+  padding: 40px;
+  gap: 20px;
+  font-size: large;
+  animation: slidedown 0.4s ease-in-out;
+  width: 100%;
+}
+
+@keyframes slidedown {
+  from {
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.scroll-to-top {
+  position: fixed; /* Ekranda sabit durmasını sağlar */
+  bottom: 20px; /* Sayfanın altından 20px yukarıda */
+  right: 20px; /* Sayfanın sağından 20px içeride */
+  background-color: #000; /* Arka plan rengi */
+  color: #fff; /* İkon rengi */
+  border: none; /* Kenarlık yok */
+  border-radius: 50%; /* Yuvarlak buton */
+  padding: 12px; /* İç boşluk */
+  font-size: 18px; /* İkon boyutu */
+  cursor: pointer; /* Tıklanabilir işaretçiyi gösterir */
+
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  from {
+    transform: scale(1.4);
+  }
+  to {
+    trasform: scale(1);
+  }
+}
+.scroll-to-top:hover {
+  background-color: #333; /* Hover sırasında arka plan koyulaşır */
+}

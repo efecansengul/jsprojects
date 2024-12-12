@@ -1,0 +1,103 @@
+:root {
+  --font-size: 24px;
+  --font-family: "Roboto Mono";
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+}
+.menu {
+  height: 100%;
+}
+.title {
+  margin: 48px;
+  font-size: var(--font-size);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--font-family);
+}
+.title > h3 {
+  font-weight: 700;
+}
+.underline {
+  height: 2px;
+  width: 120px;
+  background-color: rgb(212, 142, 13);
+  text-align: center;
+  margin-top: 10px;
+}
+/* section-center'ı grid container olarak ayarlıyoruz */
+.section-center {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 eşit sütun */
+  gap: 60px; /* Öğeler arasındaki boşluk */
+  width: 60%;
+  max-width: 1200px; /* Maksimum genişlik */
+  margin: 0 auto; /* Yatayda ortalar */
+  padding-bottom: 200px;
+}
+
+/* Menü öğeleri için stil */
+.menu-item {
+  background-color: #f2f2f2; /* Arka plan rengi */
+  padding: 20px; /* İç boşluk */
+  border: 1px solid #ddd; /* Kenarlık */
+  text-align: center; /* Yazıyı ortalar */
+}
+
+/* Görsellerin boyutunu ayarlıyoruz */
+.menu-item img {
+  width: 100%; /* Görseli kapsayıcıya göre boyutlandır */
+  height: auto; /* Yüksekliği orantılı yap */
+}
+.item-info > header {
+  display: flex;
+  align-items: center;
+  height: auto;
+  justify-content: space-around;
+  margin: 20px;
+  font-size: var(--font-size);
+}
+.item-info > p {
+  font-size: 20px;
+  letter-spacing: 1.1px;
+}
+h4 {
+  text-transform: uppercase;
+  padding: 1rem;
+}
+.filteredMenu {
+  display: flex;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  gap: 1rem;
+  margin-bottom: 24px;
+}
+.filteredMenu > button {
+  padding: 6px;
+  color: rgb(228, 168, 47);
+  background-color: white;
+  border: 1px solid rgb(228, 168, 47);
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 18px;
+}
+button:hover {
+  background-color: rgb(228, 168, 47);
+  color: white;
+}
+@media (max-width: 800px) {
+  .section-center {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.price {
+  color: rgb(228, 168, 47);
+}

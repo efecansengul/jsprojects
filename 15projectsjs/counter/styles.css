@@ -1,0 +1,39 @@
+:root {
+  --font-size-main: 24px;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+.main {
+  display: flex;
+  height: 90vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h3 {
+  font-size: var(--font-size-main);
+}
+p {
+  font-size: 6rem;
+}
+.button-class {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  width: 50%;
+  justify-content: center;
+
+  gap: 1rem;
+}
+.decrease,
+.increase,
+.reset {
+  font-size: var(--font-size-main);
+  cursor: pointer;
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

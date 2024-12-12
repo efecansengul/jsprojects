@@ -1,0 +1,64 @@
+* {
+  --font-size: 24px;
+  --background-color: rgb(237, 247, 252);
+}
+
+html,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--background-color);
+}
+.section {
+  display: flex;
+  margin-top: 50px;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  width: 50%;
+  margin: 70px auto;
+}
+.section {
+  font-size: var(--font-size);
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+}
+.form {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  gap: 10px;
+}
+.form label {
+  font-weight: 600;
+}
+.form input {
+  padding: 6px;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+}
+.form .btn {
+  padding: 12px;
+  background-color: powderblue;
+  border: none;
+  cursor: pointer;
+  height: 40px;
+  width: 100px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.lorem-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  margin: 100px auto;
+}
