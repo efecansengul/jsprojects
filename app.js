@@ -74,6 +74,11 @@ const projects = [
     link: "./15projectsjs/videoproject/index.html",
     image: "./public/video.png",
   },
+  {
+    name: "Image Opacity Solution",
+    link: "./15projectsjs/imageopacitysolution/index.html",
+    image: "./public/opacityImage.png",
+  },
 ];
 
 const projectGrid = document.getElementById("project-grid");
